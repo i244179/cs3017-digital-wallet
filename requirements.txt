@@ -1,0 +1,15 @@
+# Runtime dependencies of the API, workers, migrations and seed (pinned). Installed by infra/Dockerfile.
+# Verified on Python 3.13 (development) and declared for the python:3.12-slim image.
+SQLAlchemy==2.0.58
+alembic==1.20.1
+psycopg[binary]==3.3.9
+pydantic==2.13.5
+pydantic-settings==2.16.3
+python-dotenv==1.2.3          # pydantic-settings reads infra/.env through it
+fastapi==0.165.0
+starlette==1.7.0              # imported directly (middleware, responses); pinned to the version FastAPI resolved
+uvicorn[standard]==0.54.0
+httpx==0.28.1                 # rail HTTP client
+PyJWT==2.15.0
+pika==1.5.0                   # RabbitMQ publisher/consumers
+prometheus-client==0.26.0

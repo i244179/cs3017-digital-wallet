@@ -1,0 +1,31 @@
+# Secrets and local configuration — never commit real values
+.env
+infra/.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Frontend (Phase 5)
+frontend/node_modules/
+frontend/dist/
+
+# Documentation tooling (npm ci in evidence/tools)
+evidence/tools/node_modules/
+
+# Local tooling
+.idea/
+.vscode/
+*.log
+# ...but evidence logs are deliverables
+!evidence/**/*.log
+
+# Settlement files produced at runtime by the simulated rail
+data/settlement_files/generated/

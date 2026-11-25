@@ -1,0 +1,8 @@
+# Tests, API-contract tooling and evidence scripts (not needed in the runtime image).
+-r requirements.txt
+pytest==8.4.2
+PyYAML==6.0.3                 # api/openapi.yaml
+jsonschema==4.26.0            # response and event-schema validation
+referencing==0.37.0           # $ref resolution in the contract-validating test client
+openapi-spec-validator==0.9.0
+playwright==1.63.0            # browser E2E and screenshots (uses the system Chrome; no browser download needed)
